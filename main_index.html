@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>xSv4 | Home</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0F172A;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      position: relative;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: transparent;
+      border-bottom: none;
+      position: relative;
+    }
+
+    .logo {
+      width: 64px;
+      height: auto;
+      filter: blur(2px);
+      transition: filter 0.3s ease;
+    }
+
+    .logo:hover {
+      filter: none;
+    }
+
+    .contact-button,
+    .jobs-button {
+      background-color: transparent;
+      border: 2px solid #8A2BE2;
+      border-radius: 20px;
+      color: #8A2BE2;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      outline: none;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .contact-button:hover,
+    .jobs-button:hover {
+      background-color: #8A2BE2;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .purple-rectangle {
+      position: absolute;
+      top: 150px; /* 50px below the navbar */
+      left: 0;
+      width: 100%;
+      height: 350px;
+      background: linear-gradient(to right, rgba(138, 43, 226, 0.7), rgba(138, 43, 226, 0), rgba(138, 43, 226, 0.7));
+      z-index: -1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .badge-img {
+      width: 128px; /* Adjust the size as needed */
+      height: auto;
+    }
+
+    /* Updated CSS for the additional images */
+    .extra-images,
+    .second-extra-images {
+      position: absolute;
+      transform: scale(0.8);
+      display: flex;
+      align-items: center;
+    }
+
+    .extra-images img,
+    .second-extra-images img {
+      width: auto;
+      height: auto;
+      transform: scale(0.8);
+      margin-right: 10px;
+      border-radius: 3%;
+    }
+
+    .extra-images {
+      top: 470px;
+      left: -100px;
+    }
+
+    .second-extra-images {
+      top: 970px;
+      left: -140px;
+    }
+    
+    .last-image img,
+    .last-image img {
+      width: auto;
+      height: auto;
+      transform: scale(0.8);
+      margin-right: 10px;
+      border-radius: 2%;
+    }
+
+    .last-image {
+      position: absolute;
+      top: 1600px; /* Adjust this value to position the image as desired */
+      left: -50px;
+    }
+
+
+    /* Added CSS for the xSv4 text */
+    .badge-text {
+      position: absolute;
+      top: 20px; /* 20px below the badge */
+      left: 50%; /* Center the text */
+      transform: translateX(-50%); /* Adjust for centering */
+      color: #ffffff;
+      font-size: 24px; /* Adjust font size as needed */
+    }
+
+    /* Footer styles */
+    .footer {
+      background-color: rgba(10, 17, 31, 0.8); /* Darker color */
+      color: #ffffff;
+      text-align: center;
+      padding: 10px;
+      position: absolute;
+      top: 2600px;
+      width: 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <img src="logo.png" alt="Logo" class="logo">
+    <!-- Updated div for the additional images inside the navbar -->
+    <div class="extra-images">
+      <img src="lol.png" alt="Image 1">
+      <img src="apply.png" alt="Image 2">
+    </div>
+    <div class="second-extra-images">
+      <img src="glass.png" alt="Image 1">
+      <img src="stay_safe.png" alt="Image 2">
+    </div>
+    <div class="last-image">
+      <img src="who_are_we.png" alt="we are">
+    </div>
+    <div>
+      <a href="/index.html" class="contact-button">Home</a>
+      <a href="/jobs.html" class="jobs-button">Request</a>
+      <a href="/contact.html" class="contact-button">Contact Us</a>
+      <a href="/apply.html" class="contact-button">Apply</a>
+      <a href="/projects.html" class="contact-button">Projects</a>
+    </div>
+  </div>
+
+  <div class="purple-rectangle">
+    <img src="badge.png" alt="Badge" class="badge-img">
+    <!-- Added xSv4 text -->
+    <!--  <p class="badge-text">xSv4</p> -->
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    xSv4 2024
+  </div>
+
+</body>
+
+</html>
