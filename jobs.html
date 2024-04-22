@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xSv4 | Requests</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0F172A;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      position: relative;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: transparent;
+      border-bottom: none;
+    }
+
+    .logo {
+      width: 64px;
+      height: auto;
+      filter: blur(2px);
+      transition: filter 0.3s ease;
+    }
+
+    .logo:hover {
+      filter: none;
+    }
+
+    .contact-button,
+    .jobs-button {
+      background-color: transparent;
+      border: 2px solid #8A2BE2;
+      border-radius: 20px;
+      color: #8A2BE2;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      outline: none;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .contact-button:hover,
+    .jobs-button:hover {
+      background-color: #8A2BE2;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .container {
+      position: absolute;
+      top: 160px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 800px;
+      background-color: transparent;
+      border: 2px solid #38444D;
+      border-radius: 10px;
+      padding: 10px;
+      color: white;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    .max-characters {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <img src="logo.png" alt="Logo" class="logo">
+    <div>
+      <a href="/index.html" class="contact-button">Home</a>
+      <a href="/jobs.html" class="jobs-button">Request</a>
+      <a href="/contact.html" class="contact-button">Contact Us</a>
+      <a href="/apply.html" class="contact-button">Apply</a>
+      <a href="/projects.html" class="contact-button">Projects</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>Request</p>
+    <form id="jobsForm">
+      <div style="margin-bottom: 10px;">
+        <label for="jobType" style="color: white;"></label><br>
+        <select id="jobType" name="jobType" required style="width: 100%; max-width: 300px; background-color: #0F172A; border: 2px solid #38444D; border-radius: 10px; color: white; padding: 10px;">
+          <option value="" disabled selected>Select a Request Type</option>
+          <option value="DOX Request">DOX Request</option>
+          <option value="Email Flooding">Email Flooding</option>
+          <option value="Phishing Request">Phishing Request</option>
+          <option value="DDoS">DDoS Request</option>
+          <option value="WI-FI Password Credentials">WI-FI Password Credentials</option>
+          <option value="Google Accounts">Buy Google Accounts</option>
+          <option value="Rubber Ducky">Rubber Ducky Attack</option>
+          <option value="API Exploit">API Exploit</option>
+          <option value="Social Engineering">Social Engineering</option>
+          <option value="Email Sender Spoofing">Email Sender Spoofing</option>
+          <option value="General Exploit">General Exploit</option>
+          
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+      <div style="margin-bottom: 10px;">
+        <label for="email" style="color: white;"></label><br>
+        <input type="email" id="email" name="email" required placeholder="Your Email"
+          style="width: 100%; max-width: 300px; background-color: #0F172A; border: 2px solid #38444D; border-radius: 10px; color: white; padding: 10px;">
+      </div>
+      <textarea id="details" name="details"
+        style="width: 90%; max-width: 100%; height: 200px; background-color: #0F172A; border: 2px solid #38444D; border-radius: 10px; color: white; padding: 10px; resize: none; margin-bottom: 10px;"
+        placeholder="Enter job details here..." maxlength="555"></textarea>
+      <button type="submit"
+        style="background-color: #8A2BE2; border: none; border-radius: 20px; color: white; padding: 10px 20px; font-size: 16px; font-weight: bold; cursor: pointer; outline: none; text-decoration: none; transition: all 0.3s ease;">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('jobsForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Get email, job type, and details
+      var email = document.getElementById('email').value;
+      var jobType = document.getElementById('jobType').value;
+      var details = document.getElementById('details').value;
+
+      // Construct the redirect URL
+      var redirectUrl = 'https://xgg.pythonanywhere.com/jobs/' + email + '&' + jobType + '&' + details;
+
+      // Redirect to the constructed URL
+      window.location.href = redirectUrl;
+    });
+  </script>
+
+
+</body>
+
+</html>
