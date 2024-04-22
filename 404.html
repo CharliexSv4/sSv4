@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8T7r7TrfJGjhgUreYFyuf</title>
+    <!-- Link to Google Fonts for Arial -->
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #202124;
+            color: #ACACAC; /* Main text color */
+            font-family: 'Arial', sans-serif; /* Set Arial as the font family */
+        }
+
+        #failure-image {
+            position: absolute;
+            width: 64px;
+            height: auto;
+            transform: scale(0.6);
+            top: 135px;
+            left: 645px;
+        }
+
+        #image-caption {
+            position: absolute;
+            top: 235px; /* 100px below the image */
+            left: 660px;
+            font-size: 24px;
+            font-weight: bold;/* Larger text size */
+        }
+
+        #smaller-text {
+            position: absolute;
+            top: 290px; /* 55px below the image caption */
+            left: 660px;
+            font-size: 17px;
+            font-weight: normal; /* Normal text weight */
+        }
+
+        #smaller-text-two {
+            position: absolute;
+            top: 340px; /* 50px below the smaller text */
+            left: 660px;
+            font-size: 15px;
+            font-weight: normal; /* Normal text weight */
+        }
+
+        #smaller-text-three {
+            position: absolute;
+            top: 390px; /* 50px below the smaller text two */
+            left: 660px;
+            font-size: 11px;
+            font-weight: normal; /* Normal text weight */
+        }
+
+        #reload-button {
+            position: absolute;
+            top: 440px; /* 50px below the smaller text three */
+            left: 660px;
+            background-color: #8AB4F8; /* Button color */
+            color: #000000; /* Black font color */
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none; /* Remove border */
+        }
+    </style>
+</head>
+<body>
+    <img id="failure-image" src="failure.png" alt="Failure" width="100" height="100">
+    <div id="image-caption">This site can’t be reached</div>
+    <div id="smaller-text">Check if there is a typo in ehgfjdhgfjhsdgfhg.com.</div>
+    <div id="smaller-text-two">If spelling is correct, try running Windows Network Diagnostics.</div>
+    <div id="smaller-text-three">DNS_PROBE_FINISHED_NXDOMAIN</div>
+    <button id="reload-button" onclick="location.reload()">Reload</button>
+</body>
+</html>
