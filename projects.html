@@ -89,6 +89,21 @@
       color: red;
     }
   </style>
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Get the referrer URL
+        var referrer = document.referrer;
+
+        // Get the current domain
+        var currentDomain = window.location.hostname;
+
+        // Check if the referrer contains the current domain
+        if (!referrer.includes(currentDomain)) {
+            // Redirect the user to index.html
+            window.location.href = '/xSv4/index.html';
+        }
+      });
+    </script>
 </head>
 
 <body>
