@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xSv4 | Active Proxies</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0F172A;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: transparent;
+            border-bottom: none;
+        }
+
+        .logo {
+            width: 64px;
+            height: auto;
+            filter: blur(2px);
+            transition: filter 0.3s ease;
+        }
+
+        .logo:hover {
+            filter: none;
+        }
+
+        .jobs-button {
+            background-color: transparent;
+            border: 2px solid #8A2BE2;
+            border-radius: 20px;
+            color: #8A2BE2;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .jobs-button:hover {
+            background-color: #8A2BE2;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .container {
+            background-color: #38444D;
+            border-radius: 15px;
+            padding: 20px;
+            color: white;
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .container.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .listing {
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #2C3540;
+        }
+
+        p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .online {
+            color: green;
+        }
+
+        .middle {
+            color: yellow;
+        }
+
+        .alright {
+            color: orange;
+        }
+
+        .bad {
+            color: red;
+        }
+
+        .security-container {
+            border-radius: 15px;
+            padding: 20px;
+            position: absolute;
+            top: 250px;
+            left: 435px;
+            width: 150px;
+            background-color: #38444D;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+    </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get the referrer URL
+      var referrer = document.referrer;
+
+      // Get the current domain
+      var currentDomain = window.location.hostname;
+
+      // Check if the referrer contains the current domain
+      if (!referrer.includes(currentDomain)) {
+          // Redirect the user to index.html
+          window.location.href = '/xSv4/index.html';
+      }
+    });
+  </script>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div>
+
+            <a href="/xSv4/index.html" class="jobs-button">Home</a>
+            <a href="/xSv4/jobs.html" class="jobs-button">Request</a>
+            <a href="/xSv4/contact.html" class="jobs-button">Contact Us</a>
+            <a href="/xSv4/apply.html" class="jobs-button">Apply</a>
+            <a href="/xSv4/projects.html" class="jobs-button">Projects</a>
+
+        </div>
+    </div>
+
+    <div class="security-container" id="securityContainer">
+        <p style="font-size: 24px; color: white;">Enter the security key</p>
+    </div>
+
+    <div class="container" id="container">
+      <div class="listing">
+        <p><a href="https://socialstudies.abatek.com/" style="color: white;">socialstudies.abatek.com</a> | Status: <span class="online">Online</span> | Security: <span class="middle">7/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://pop.dragrecords.com/" style="color: white;">pop.dragrecords.com</a> | Status: <span class="online">Online</span> | Security: <span class="bad">5/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://isjynxzial.callmark.cl/" style="color: white;">isjynxzial.callmark.cl</a> | Status: <span class="online">Online</span> | Security: <span class="middle">7/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://en.tekhconsulting.com/" style="color: white;">en.tekhconsulting.com</a> | Status: <span class="online">Online</span> | Security: <span class="online">9/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://student.sspcschools.com/" style="color: white;">student.sspcschools.com</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://web-g2b.editor.cftmassachusetts.cl/" style="color: white;">web-g2b.editor.cftmassachusetts.cl</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://alain.sdsrp.com/" style="color: white;">alain.sdsrp.com</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://web.cassettica.com/" style="color: white;">web.cassettica.com</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://diamondtestercheck.lee.mx" style="color: white;">diamondtestercheck.lee.mx</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://cc.encyclopedia.tw/" style="color: white;">cc.encyclopedia.tw</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://create.s-engine.com/" style="color: white;">create.s-engine.com</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://en.periodico.am/" style="color: white;">en.periodico.am</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://mason.sdsrp.com/" style="color: white;">mason.sdsrp.com</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://portal.runrenedu.com/" style="color: white;">portal.runrenedu.com</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://learn.sspcschools.com/" style="color: white;">learn.sspcschools.com</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://geoquiz.goncharmaster.ru/" style="color: white;">geoquiz.goncharmaster.ru</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://us.designjobs.eu/" style="color: white;">us.designjobs.eu</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://jayslol.us.to/" style="color: white;">jayslol.us.to</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://likeablefastprotons.bishallimbu.com.np/" style="color: white;">likeablefastprotons.bishallimbu.com.np</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://pluming.tclbbs.net/" style="color: white;">pluming.tclbbs.net</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://design.gblandscape.com/" style="color: white;">design.gblandscape.com</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://en.cachingtech.com/" style="color: white;">en.cachingtech.com</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://c.keybusinessconnection.com/" style="color: white;">c.keybusinessconnection.com</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+
+      <div class="listing">
+        <p><a href="https://spidermanspiderman.callmark.cl/" style="color: white;">spidermanspiderman.callmark.cl</a> | Status: <span class="online">Online</span> | Security: <span class="online">10/10</span></p>
+      </div>
+        <!-- Add more proxy listings here -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.getElementById('container');
+            const securityContainer = document.getElementById('securityContainer');
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === '\\') {
+                    container.classList.add('show');
+                    securityContainer.style.display = 'none';
+                } else if (event.key === '80') {
+                    container.classList.remove('show');
+                    securityContainer.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
