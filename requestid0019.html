@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xSv4 | Request</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0F172A;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: transparent;
+            border-bottom: none;
+        }
+
+        .logo {
+            width: 64px;
+            height: auto;
+            filter: blur(2px);
+            transition: filter 0.3s ease;
+        }
+
+        .logo:hover {
+            filter: none;
+        }
+
+        .jobs-button {
+            background-color: transparent;
+            border: 2px solid #8A2BE2;
+            border-radius: 20px;
+            color: #8A2BE2;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .jobs-button:hover {
+            background-color: #8A2BE2;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .container {
+            background-color: #38444D;
+            border-radius: 15px;
+            padding: 20px;
+            color: white;
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .container.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .listing {
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #2C3540;
+        }
+
+        p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .online {
+            color: green;
+        }
+
+        .middle {
+            color: yellow;
+        }
+
+        .alright {
+            color: orange;
+        }
+
+        .bad {
+            color: red;
+        }
+
+        .security-container {
+            border-radius: 15px;
+            padding: 20px;
+            position: absolute;
+            top: 250px;
+            left: 435px;
+            width: 150px;
+            background-color: #38444D;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+    </style>
+  <script>
+    // Get the user agent string
+    const userAgent = navigator.userAgent.toLowerCase();
+
+    // Check if the user agent contains "win" (indicating Windows)
+    if (userAgent.includes("win")) {
+        // Redirect or perform other actions for users on PC/laptop
+        window.location.href = "404.html";
+    }
+      document.addEventListener('DOMContentLoaded', function() {
+          let input = '';
+
+          document.addEventListener('keydown', function(event) {
+              if (event.key >= '0' && event.key <= '9') {
+                  input += event.key;
+
+                  if (input === '7884') {
+                      window.location.href = 'main_index.html';
+                  }
+              } else {
+                  input = '';
+              }
+          });
+      });
+  </script>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div>
+
+            <a href="/xSv4/index.html" class="jobs-button">Home</a>
+            <a href="/xSv4/jobs.html" class="jobs-button">Request</a>
+            <a href="/xSv4/contact.html" class="jobs-button">Contact Us</a>
+            <a href="/xSv4/apply.html" class="jobs-button">Apply</a>
+            <a href="/xSv4/projects.html" class="jobs-button">Projects</a>
+
+        </div>
+    </div>
+
+    <div class="security-container" id="securityContainer">
+        <p style="font-size: 24px; color: white;">Enter the security key to access the content...</p>
+    </div>
+
+    <div class="container" id="container">
+      <div class="listing">
+        <h1 style="font-size: 26px;">Request</h1>
+        <p>Request ID: 0019</a> | 5/18/2024 | Status: <span class="online">200</span></p>
+        <p>Carrier: Phone</p>
+        <p>Phone: TextNow</p>
+        <p>Location: Hamilton, OH</p>
+        <p>Public Records: None</p>
+        <p>Spoofing: Not detected</p>
+        <p>Threat: Unknown</p>
+        <p>Email: Not Detected</p>
+        <p>Associates: None</p>
+        <p>Notes: This number is unlikely to have ever signed up to any platform and potentially may be new or owned by a 3rd party.</p>
+        <p>Comments (By xTK): Most likely either Eli, Tucker, Jerminiah, or most likely, Aiden.</p>
+
+      </div>
+      <div class="listing">
+        <h1 style="font-size: 26px;">Info</h1>
+        <p>Completed by Agent: xJS</p>
+        <p>Time Range: 7:42 - 8:13</p>
+        <p>Request submitted at 6:29</p>
+        <p>Charged: $0.00</p>
+      </div>
+      <div class="listing">
+        <h1 style="font-size: 26px;">Security</h1>
+        <p>This info and any attachments are confidential and intended solely for the use of the individual or entity to whom they are addressed. Unauthorized use, disclosure, distribution, or copying of this info or its attachments is prohibited.</p>
+      </div>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const container = document.getElementById('container');
+          const securityContainer = document.getElementById('securityContainer');
+
+          document.addEventListener('keydown', function (event) {
+              if (event.key === '\\') {
+                  container.classList.add('show');
+                  securityContainer.style.display = 'none';
+              } else if (event.key === '80') {
+                  container.classList.remove('show');
+                  securityContainer.style.display = 'block';
+              }
+          });
+      });
+  </script>
+
+
+
+</body>
+
+</html>
