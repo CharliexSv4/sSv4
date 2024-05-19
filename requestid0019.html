@@ -117,31 +117,33 @@
         }
 
     </style>
-  <script>
-    // Get the user agent string
-    const userAgent = navigator.userAgent.toLowerCase();
+    <script>
+        // Get the user agent string
+        const userAgent = navigator.userAgent.toLowerCase();
 
-    // Check if the user agent contains "win" (indicating Windows)
-    if (userAgent.includes("win")) {
-        // Redirect or perform other actions for users on PC/laptop
-        window.location.href = "404.html";
-    }
-      document.addEventListener('DOMContentLoaded', function() {
-          let input = '';
+        // Check if the user agent contains "win" (indicating Windows) or "android"
+        if (userAgent.includes("win") || userAgent.includes("android")) {
+            // Redirect or perform other actions for users on Windows or Android devices
+            window.location.href = "404.html";
+        }
 
-          document.addEventListener('keydown', function(event) {
-              if (event.key >= '0' && event.key <= '9') {
-                  input += event.key;
+        document.addEventListener('DOMContentLoaded', function() {
+            let input = '';
 
-                  if (input === '7884') {
-                      window.location.href = 'main_index.html';
-                  }
-              } else {
-                  input = '';
-              }
-          });
-      });
-  </script>
+            document.addEventListener('keydown', function(event) {
+                if (event.key >= '0' && event.key <= '9') {
+                    input += event.key;
+
+                    if (input === '7884') {
+                        window.location.href = 'main_index.html';
+                    }
+                } else {
+                    input = '';
+                }
+            });
+        });
+    </script>
+
 </head>
 
 <body>
